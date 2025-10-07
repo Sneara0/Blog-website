@@ -11,7 +11,7 @@ export default function Navbar(){
         <nav className="bg-blue-600 text-white  shadow-md relative ">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                
-                <div className=" flex  items-center space-x-2">
+                <div className= " flex  items-center space-x-2">
                     <FaBook className="text-2xl"></FaBook>
                     <h1 className="text-xl font-bold" >My Blog</h1>
 
@@ -19,24 +19,20 @@ export default function Navbar(){
                 </div>
 
 
-                <ul className="hidden md:flex space-x-6 font-medium">
-                    <li>
-                        <li>
-                            <Link href='/' className="hover:text-gray-500"></Link>
-                        </li>
-                        <li>
-                         <Link href='/blogs' className="hover:text-gray-500"  >Blogs</Link>
+                <div className="hidden md:flex space-x-6 font-medium">
+                
+                     <Link href='/' className="hover:text-gray-500">Home</Link>
+                        
+                    <Link href='/blogs' className="hover:text-gray-500"  >Blogs</Link>
 
-                        </li>
-                        <li>
-                            <Link href='/about' className="hover:text-gray-500">About</Link>
-                        </li>
-                        <li>
-                            <Link href='/contact' className="hover:text-gray-500">Contact</Link>
-                        </li>
-                    </li>
+                        
+                    <Link href='/about' className="hover:text-gray-500">About</Link>
+                       
+                    <Link href='/contact' className="hover:text-gray-500">Contact</Link>
+                      
+                    
 
-                </ul>
+                </div>
 
                 <button className="md:hidden text-2xl" onClick={()=>setOpen(!open)}>
                     {open ? <FaTimes/> : <FaBars/>}
@@ -48,6 +44,28 @@ export default function Navbar(){
 
 
             </div>
+
+
+
+            {
+                open  && (
+                    <ul className="md:hidden bg-blue-700 px-4 py-4 space-y-2 transition-all  duration-300 ease-in-out absolute w-full ">
+                       <li>
+                        <Link href='/' className="block hover:text-gray-900" onClick={()=> setOpen(false)}>Home</Link>
+                       </li>
+                       <li>
+                        <Link href='/blogs' className="block hover:text-gray-900 " onClick={()=> setOpen(false)}>Blogs</Link>
+                       </li>
+                       <li>
+                        <Link href='aAbout' className="block hover:text-gray-900" onClick={()=>setOpen(false)}>About</Link>
+                       </li>
+                       <li>
+                        <Link href='/contact' className="block hover:text-gray-900" onClick={()=>setOpen(false)}>Contact</Link>
+                       </li>
+                    </ul>
+
+                )
+            }
 
           
 

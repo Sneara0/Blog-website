@@ -1,6 +1,7 @@
 
 import "./globals.css";
 import Navbar from "./components/Navbar"
+import Hero from "./components/Hero";
 
 
 
@@ -9,6 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar/>
+        <Hero/>
         
     
         {children}

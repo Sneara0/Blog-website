@@ -8,12 +8,12 @@ import { FaBook } from "react-icons/fa";``
 export default function Navbar(){
     const [open,setOpen]=useState(false);
     return(
-        <nav className="bg-blue-600 text-white  shadow-md relative ">
+        <nav className="bg-green-600 text-white  shadow-md relative ">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
                
                 <div className= " flex  items-center space-x-2">
                     <FaBook className="text-2xl"></FaBook>
-                    <h1 className="text-xl font-bold" >My Blog</h1>
+                    <h1 className="text-xl font-bold" >My Blog1</h1>
 
 
                 </div>
